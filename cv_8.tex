@@ -1,0 +1,240 @@
+\documentclass{scrartcl}
+\reversemarginpar % Move the margin to the left of the page 
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+
+
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Johan Ekekrantz}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Born in Stockholm, Sweden,}}{11 July 1986} % Birthplace and date
+
+\NewEntry{email}{\href{mailto:johan.ekekrantz@gmail.com}{johan.ekekrantz@gmail.com}} % Email address
+
+%\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+
+\NewEntry{phone}{+46 70 321 6564} % Phone number
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{2012--Present}{PHD Student, \textsc{KTH \\ RPL - Robotics, Perception and Learning Lab (formerly CVAP)}  --- Stockholm, Sweden}
+
+\Description{\MarginText{Royal Institute of Technology (KTH)}Focus on mobile robotics and computer vision for long term applications. Particularly interested in Pointcloud registration, robust estimation, self-tuning estimation, 3D-slam, object modelling, bundle adjustment and other related topics.}
+
+%------------------------------------------------
+
+\NewEntry{May 2016--Present}{IT consultant, \textsc{Combitech AB}  --- Stockholm, Sweden}
+
+\Description{\MarginText{Combitech AB}Part time job as IT consultant in Computer Vision, using thermal cameras in industrial setting.}
+
+%------------------------------------------------
+
+\NewEntry{Jun-Dec 2010}{Software engineer, \textsc{Saab Technologies}  --- Stockholm, Sweden}
+
+\Description{\MarginText{Saab Technologies}Summer and part time job as a software engineer at the RnD department. Worked mostly on software controlled automated testing of hardware components.}
+
+%------------------------------------------------
+
+\NewEntry{Jun-Aug 2006}{Summer job, \textsc{MicroSystemation AB} --- Stockholm, Sweden}
+
+\Description{\MarginText{MicroSystemation AB}Summer job, hardware production and testing.}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2012-present}{Royal Institute of Technology, Stockholm}
+
+\Description{\MarginText{PHD in Computer Science}Department: RPL - Robotics, Perception and Learning Lab (formerly CVAP)\newline
+Focus: Mobile robotics and computer vision for long term applications. \newline
+Interests: Pointcloud registration, robust estimation, 3D-slam, bundle adjustment and other related topics..\newline 
+Supervisors: Prof.~Patric \textsc{Jensfeldt} \& Assoc. Prof.~John \textsc{Folkesson} \newline
+}
+
+\NewEntry{2005-2015}{Royal Institute of Technology, Stockholm}
+
+\Description{\MarginText{Masters of Science in Engineering}School: School of Computer Science and Communication\newline
+Focus: Autonomous systems, Computer science.\newline 
+Thesis: \textit{Visual Attention using 3D Context}\newline
+Description: This thesis explored the idea of using the 3D context of objects to determine the regions in an image where a certain
+class of objects might occur. This is achieved by using depth information from a Microsoft Kinect sensor and machine learning techniques such as support vector-machines, k-means clustering and gradient-descent based boosting.\newline
+Supervisors: Prof.~Patric \textsc{Jensfeldt} \& Dr.~Alper \textsc{Aydemir} \newline
+Examiner: Prof.~Stefan \textsc{Carlsson}
+}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\clearpage
+\spacedlowsmallcaps{Publications}\vspace{1em}
+
+\NewEntry{2016}{Towards an adaptive system for lifelong object modelling}
+
+\Description{\MarginText{ICRA 2016 Workshop: AI for Long-term Autonomy} In this paper, a system for incrementally building and maintaining a database of 3D objects for robots with long run times is presented. The system is a step towards lifelong autonomous object modelling using a mobile robot. The proposed solution iteratively fuses observations as they arrive into better and better models. By greedily allowing the system to fuse data, mistakes can be made. The system continuously seek to detect and remove such errors, without the need for batch updates using all known data at once.\\ \textit{Authors:} \textbf{Johan Ekekrantz}, Nils Bore, Rares Ambrus, John Folkesson, Patric Jensfelt}
+
+\NewEntry{2015}{Probabilistic Primitive Refinement algorithm for colored point cloud data}
+
+\Description{\MarginText{European Conference on Mobile Robots 2015}In this work we present the Probabilistic Primitive Refinement (PPR) algorithm, an iterative method for accurately determining the inliers of an estimated primitive (such as planes and spheres) parametrization in an unorganized, noisy point cloud. The measurement noise of the points belonging to the proposed primitive surface are modelled using a Gaussian distribution and the measurements of extraneous points to the proposed surface are modelled as a histogram. Given these models, the probability that a measurement originated from the proposed surface model can be computed. Our novel technique to model the noisy surface from the measurement data does not require a priori given parameters for the sensor noise model. The absence of sensitive parameters selection is a strength of our method. Using the geometric information obtained from such an estimate the algorithm then builds a color-based model for the surface, further boosting the accuracy of the segmentation. If used iteratively the PPR algorithm can be seen as a variation of the popular mean-shift algorithm with an adaptive stochastic kernel function.\\ \textit{Authors:} \textbf{Johan Ekekrantz}, Akshaya Thippur, John Folkesson, Patric Jensfelt}
+
+\NewEntry{2015}{Unsupervised learning of spatial-temporal models of objects in a long-term autonomy scenario}
+
+\Description{\MarginText{International Conference on Intelligent Robots and Systems 2015}We present a novel method for clustering segmented dynamic parts of indoor RGB-D scenes across repeated observations by performing an analysis of their spatial-temporal distributions. We segment areas of interest in the scene using scene differencing for change detection. We extend the Meta-Room method and evaluate the performance on a complex dataset acquired autonomously by a mobile robot over a period of 30 days. We use an initial clustering method to group the segmented parts based on appearance and shape, and we further combine the clusters we obtain by analyzing their spatial-temporal behaviors. We show that using the spatial-temporal information further increases the matching accuracy.\\ \textit{Authors:} Rares Ambrus, \textbf{Johan Ekekrantz}, John Folkesson, Patric Jensfelt}
+
+%\Description{\MarginText{International Conference on Intelligent Robots and Systems 2015} \textit{Authors:} Rares Ambrus, \textbf{Johan Ekekrantz}, John Folkesson, Patric Jensfelt}
+
+\NewEntry{2014}{Long-term topological localisation for service robots in dynamic environments using spectral maps}
+
+\Description{\MarginText{International Conference on Intelligent Robots and Systems 2014}This paper presents a new approach for topological localisation of service robots in dynamic indoor environments. In contrast to typical localisation approaches that rely mainly on static parts of the environment, our approach makes explicit use of information about changes by learning and modelling the spatio-temporal dynamics of the environment where the robot is acting. The proposed spatio-temporal world model is able to predict environmental changes in time, allowing the robot to improve its localisation capabilities during long-term operations in populated environments. To investigate the proposed approach, we have enabled a mobile robot to autonomously patrol a populated environment over a period of one week while building the proposed model representation. We demonstrate that the experience learned during one week is applicable for topological localization even after a hiatus of three months by showing that the localization error rate is significantly lower compared to static environment representations.\\ \textit{Authors:} Tomas Krajnik, Jaime P. Fentanes, Oscar M. Mozos, Tom Duckett, \textbf{Johan Ekekrantz}, Marc Hanheide}
+
+%\Description{\MarginText{International Conference on Intelligent Robots and Systems 2014} \textit{Authors:} Tomas, Krajnik, Jaime P. Fentanes, Oscar M. Mozos, Tom Duckett, \textbf{Johan Ekekrantz}, Marc Hanheide}
+%\Description{ } 
+
+\NewEntry{2013}{Enabling Efficient Registration using Adaptive Iterative Closest Keypoint}
+
+\Description{\MarginText{IROS 2013 Workshop on Planning, Perception and Navigation for Intelligent Vehicles}Registering frames of 3D sensor data is a key functionality in many robot applications, from multi-view 3D object recognition to SLAM. With the advent of cheap and widely available, so called, RGB-D sensors acquiring such data has become possible also from small robots or other mobile devices. Such robots and devices typically have limited resources and being able to perform registration in a computationally efficient manner is therefore very important. In our recent work, we proposed a fast and simple method for registering RGB-D data, building on the principle of the Iterative Closest Point (ICP) algorithm. This paper outlines this new method and shows how it can facilitate a significant reduction in computational cost while maintaining or even improving performance in terms of accuracy and convergence properties. As a contribution we present a method to efficiently measure the quality of a found registration.\\ \textit{Authors:} \textbf{Johan Ekekrantz}, Andrzej Pronobis, John Folkesson, Patric Jensfelt}
+
+%\Description{\MarginText{IROS 2013 Workshop on Planning, Perception and Navigation for Intelligent Vehicles} \textit{Authors:} \textbf{Johan Ekekrantz}, Andrzej Pronobis, John Folkesson, Patric Jensfelt}
+%\Description{ } 
+
+\NewEntry{2013}{Adaptive iterative closest keypoint}
+
+\Description{\MarginText{European Conference on Mobile Robots 2013}Finding accurate correspondences between overlapping 3D views is crucial for many robotic applications, from multi-view 3D object recognition to SLAM. This step, often referred to as view registration, plays a key role in determining the overall system performance. In this paper, we propose a fast and simple method for registering RGB-D data, building on the principle of the Iterative Closest Point (ICP) algorithm. In contrast to ICP, our method exploits both point position and visual appearance and is able to smoothly transition the weighting between them with an adaptive metric. This results in robust initial registration based on appearance and accurate final registration using 3D points. Using keypoint clustering we are able to utilize a non exhaustive search strategy, reducing runtime of the algorithm significantly. We show through an evaluation on an established benchmark that the method significantly outperforms current methods in both robustness and precision.\\ \textit{Authors:} \textbf{Johan Ekekrantz}, Andrzej Pronobis, John Folkesson, Patric Jensfelt}
+
+%\Description{\MarginText{European Conference on Mobile Robots 2013}\\ \textit{Authors:} \textbf{Johan Ekekrantz}, Andrzej Pronobis, John Folkesson, Patric Jensfelt}
+%\Description{ } 
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+%\spacedlowsmallcaps{Computer Skills}\vspace{1em}
+
+%\Description{\MarginText{Basic}\textsc{java}, Adobe Illustrator}
+
+%\Description{\MarginText{Intermediate}\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
+
+%\Description{\MarginText{Advanced}Computer Hardware and Support}
+
+%------------------------------------------------
+
+%\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Other Information}\vspace{1em}
+%\Description{\MarginText{Parental leave} Part time 2012-2013 and 2015-2016}
+%\Description{\MarginText{Awards}2012\ \ $\cdotp$\ \ Nominated for the \textit{SAIS Best AI Master’s Thesis Award}}
+
+\Description{\MarginText{Awards}2012\ \ $\cdotp$\ \ Nominated for the \textit{SAIS Best AI Master’s Thesis Award}}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2005\ \ $\cdotp$\ \ \textit{Science student of the year} -- Bromma Gymnasium}
+
+\Description{\MarginText{Parental leave}2012-2013\ \ $\cdotp$\ \ Part time}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2015-2016\ \ $\cdotp$\ \ Part time}
+
+\Description{\MarginText{Supervisory roles}2015\ \ $\cdotp$\ \ co-supervised Dario Facchini master thesis \textit{The challenges of immersive stereo augmented reality with video head mounted displays}}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{2015\ \ $\cdotp$\ \ co-supervised Jacob Greenberg master thesis \textit{Visual Odometry for Autonomous MAV with On-Board Processing} }
+
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+%\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
+
+%\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+
+%------------------------------------------------
+
+%\vspace{1em}
+
+\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
+\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
+
+\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{Swedish}}\ \ $\cdotp$\ \ \ Mothertongue}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Good}
+
+\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
+
+%\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
+
+%------------------------------------------------
+
+\Description{\MarginText{Interests}Mixed Martial Arts\ \ $\cdotp$\ \ Carpentry\ \ $\cdotp$\ \ Boardgames\ \ $\cdotp$\ \ Cooking}
+
+%----------------------------------------------------------------------------------------
+
+%\Description{\MarginText{Social status}Married with two boys( born late 2012 and early 2015)}
+
+%----------------------------------------------------------------------------------------
+
+\end{cv}
+
+\end{document}
