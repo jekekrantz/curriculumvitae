@@ -35,7 +35,7 @@
 
 \NewEntry{}{\textit{Born in Stockholm, Sweden,}}{11 July 1986} % Birthplace and date
 
-\NewEntry{email}{\href{mailto:johan.ekekrantz@gmail.com}{johan.ekekrantz@gmail.com}} % Email address
+\NewEntry{email}{\href{mailto:johan.ekekrantz@univrses.com}{johan.ekekrantz@univrses.com}} % Email address
 
 %\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
 
@@ -53,21 +53,25 @@
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{2012--Present}{PHD Student, \textsc{KTH \\ RPL - Robotics, Perception and Learning Lab (formerly CVAP)}  --- Stockholm, Sweden}
+\NewEntry{June 2017 -- present}{Computer Vision and Machine Learning Scientist, \textsc{Univrses AB}  --- Stockholm, Sweden}
 
-\Description{\MarginText{Royal Institute of Technology (KTH)}Focus on mobile robotics and computer vision for long term applications. Particularly interested in Pointcloud registration, robust estimation, self-tuning estimation, 3D-slam, object modelling, bundle adjustment and other related topics.}
+\Description{\MarginText{Univrses AB}Working on visual odometry, lidar slam and other related topics. Algorithm development and coding. Work in C++ and Python. }
+
+\NewEntry{2012 -- June 2017}{PHD Student, \textsc{KTH \\ RPL - Robotics, Perception and Learning Lab (formerly CVAP)}  --- Stockholm, Sweden}
+
+\Description{\MarginText{Royal Institute of Technology (KTH)}Focus on mobile robotics and computer vision for long term applications. Particularly interested in pointcloud registration, robust estimation, self-tuning estimation, 3D-slam, object modelling, bundle adjustment, unsupervised segmentation and other related topics. PHD thesis and Journal article on unsupervised object detection and segmentation currently under internal review. Most work in done in C++. }
 
 %------------------------------------------------
 
-\NewEntry{May 2016--Present}{IT consultant, \textsc{Combitech AB}  --- Stockholm, Sweden}
+\NewEntry{May 2016 -- April 2017}{IT consultant, \textsc{Combitech AB}  --- Stockholm, Sweden}
 
-\Description{\MarginText{Combitech AB}Part time job as IT consultant in Computer Vision, using thermal cameras in industrial setting.}
+\Description{\MarginText{Combitech AB}Part time job as IT consultant in Computer Vision, using thermal cameras in industrial setting. Work in done in C++.}
 
 %------------------------------------------------
 
 \NewEntry{Jun-Dec 2010}{Software engineer, \textsc{Saab Technologies}  --- Stockholm, Sweden}
 
-\Description{\MarginText{Saab Technologies}Summer and part time job as a software engineer at the RnD department. Worked mostly on software controlled automated testing of hardware components.}
+\Description{\MarginText{Saab Technologies}Summer and part time job as a software engineer at the RnD department. Worked mostly on software controlled automated testing of hardware components. Work in done in C.}
 
 %------------------------------------------------
 
@@ -82,14 +86,15 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-
+\clearpage
 \spacedlowsmallcaps{Education}\vspace{1em}
 
 \NewEntry{2012-present}{Royal Institute of Technology, Stockholm}
 
 \Description{\MarginText{PHD in Computer Science}Department: RPL - Robotics, Perception and Learning Lab (formerly CVAP)\newline
 Focus: Mobile robotics and computer vision for long term applications. \newline
-Interests: Pointcloud registration, robust estimation, 3D-slam, bundle adjustment and other related topics..\newline 
+Title: \textit{Fully autonomous lifelong unsupervised learning of 3D object models}\newline
+Interests: Pointcloud registration, robust estimation, 3D-slam, unsupervised segmentation, bundle adjustment and other related topics.\newline 
 Supervisors: Prof.~Patric \textsc{Jensfeldt} \& Assoc. Prof.~John \textsc{Folkesson} \newline
 }
 
@@ -111,8 +116,13 @@ Examiner: Prof.~Stefan \textsc{Carlsson}
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\clearpage
+%\clearpage
 \spacedlowsmallcaps{Publications}\vspace{1em}
+
+
+\NewEntry{2017}{Adaptive Cost Function for Pointcloud Registration}
+
+\Description{\MarginText{Arxiv, submitted to IEEE Transactions on Robotics} In this paper we introduce an adaptive cost function for pointcloud registration. The algorithm automatically estimates the sensor noise, which is important for generalization across different sensors and environments. Through experiments on real and synthetic data, we show significant improvements in accuracy and robustness over state-of-the-art solutions.\\ \textit{Authors:} \textbf{Johan Ekekrantz}, John Folkesson, Patric Jensfelt}
 
 \NewEntry{2016}{Towards an adaptive system for lifelong object modelling}
 
